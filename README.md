@@ -1,12 +1,44 @@
-# React + Vite
+Multi Socket App
+This project is a React.js-based frontend application designed to handle multiple WebSocket connections efficiently. It includes a basic authentication flow and a dynamic interface to interact with real-time data streams via WebSockets.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+Login Functionality
+Users can log in using a secure form. Upon successful authentication, a token is received and stored via Context API and LocalStorage to maintain session persistence across refreshes.
 
-Currently, two official plugins are available:
+Persistent Authentication
+Auth state is managed globally using React's Context API and is preserved with LocalStorage, ensuring a seamless user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Webhook Component
+After login, users can access the Webhook component, which enables:
 
-## Expanding the ESLint configuration
+Establishing multiple WebSocket connections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Continuously pulling real-time data from different endpoints
+
+Managing and displaying socket data in a clean, responsive UI
+
+🛠️ Tech Stack
+Frontend: React.js
+
+State Management: Context API
+
+Authentication Storage: LocalStorage
+
+Real-time Communication: WebSockets
+
+Backend: Java Spring Boot (not included in this repository; only the frontend connection logic is present)
+
+📦 Project Structure
+pgsql
+Copy
+Edit
+src/
+├── components/
+│   ├── Login.jsx
+│   └── Webhook.jsx
+├── context/
+│   └── Context.jsx
+├── App.jsx
+└── index.jsx
+📌 Note
+The backend service is developed using Java Spring Boot, which exposes WebSocket endpoints, but backend code is not included in this repository. This repo focuses purely on the React frontend logic for connecting and interacting with those WebSockets.
