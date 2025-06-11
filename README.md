@@ -28,7 +28,6 @@ Authentication Storage: LocalStorage
 
 Real-time Communication: WebSockets
 
-Backend: Java Spring Boot (not included in this repository; only the frontend connection logic is present)
 
 📦 Project Structure
 
@@ -48,6 +47,3 @@ src/
 
 └── index.jsx
 
-📌 Note
-
-The backend service is developed using Java Spring Boot, which exposes WebSocket endpoints, but backend code is not included in this repository. This repo focuses purely on the React frontend logic for connecting and interacting with those WebSockets.
